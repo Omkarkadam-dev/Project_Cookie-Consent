@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Cookie Container */
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 32, 39, 0.9);
+    border: 1px solid #60a5fa;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.6s ease-out, slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(50px);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.cookie-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #60a5fa;
+}
+
+.cookie-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #d1d5db;
+}
+
+.learn-more {
+    color: #60a5fa;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    text-shadow: 0 0 10px #60a5fa;
+}
+
+/* Buttons */
+.cookie-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accept-btn {
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+    color: #fff;
+}
+
+.accept-btn:hover {
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    box-shadow: 0 0 10px #60a5fa;
+}
+
+.decline-btn {
+    background: #dc2626;
+    color: #fff;
+}
+
+.decline-btn:hover {
+    background: #f87171;
+    box-shadow: 0 0 10px #dc2626;
+}
